@@ -37,8 +37,15 @@ let animals: Animal[] = [
 
 
 function App() {
-  function movingOnUp(): void {
-    console.log('hello');
+  function movingOnUp(animal: Animal): void {
+    //får in valt djur
+    //matcha djur mot listan, få index
+    let index = animals.findIndex((a) => a.name === animal.name);
+    
+    //uppdatera dess index till en plats upp
+    animals.splice(index, 1); //tar bort djuret
+    animals.splice(index - 1, 0, animal); //tjoffar in djuret på sin nya plats
+    console.log(animals);
   }
   return (
     <div className="App">

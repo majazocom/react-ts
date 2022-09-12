@@ -10,7 +10,7 @@ export default function AnimalList(props:AnimalCollection) {
   return (
     <div>
       {
-        animals.map((d) => <p onClick={mou}>{d.name}</p>)
+        animals.map((animal, i) => <p key={i} onClick={() => {mou(animal)}}>{animal.name}</p>)
       }
     </div>
   )

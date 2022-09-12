@@ -5,5 +5,5 @@ export interface Animal {
 
 export interface AnimalCollection {
     animals: Animal[];
-    mou(): void;
+    mou(animal: object): void;
 }
